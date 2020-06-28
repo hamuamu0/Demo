@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#464e57</color>
+
+    <color name="app_grey_text">#666666</color>
+    <color name="login_grey_btn">#485059</color>
+
+    <!--ocr-->
+    <color name="background_black">#181a1c</color>
+    <color name="background_dialog">#3f000000</color>
+    <color name="wbcf_white">#ffffff</color>
+
+    <color name="wbcf_demo_bg">#181a1c</color>
+    <color name="wbcf_demo_version_text">#5c5b5b</color>
+    <color name="wbcf_demo_edit_text_hint">#666666</color>
+    <color name="wbcf_demo_white">#ffffff</color>
+    <color name="wbcf_demo_setting_line">#303133</color>
+    <color name="wbcf_demo_setting_area_bg">#1b1d1f</color>
+    <color name="wbcf_demo_setting_text_color">#999999</color>
+
+    <color name="wb_h5_face_verify_guide_bg">#23262b</color>
+</resources>

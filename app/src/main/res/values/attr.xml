@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="SimpleView2">
+        <attr name="progress" format="integer"/>
+        <attr name="bgcolor" format="color"/>
+        <attr name="procolor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyImageView">
+        <attr name="src" format="integer"/>
+    </declare-styleable>
+
+</resources>

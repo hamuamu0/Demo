@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.webank.cloudface.demo"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            // 设置支持的SO库架构 可以按照app需要进行设置
+            // sdk默认有'armeabi', 'armeabi-v7a',  'arm64-v8a'三个平台
+            abiFilters 'armeabi' , 'armeabi-v7a',  'arm64-v8a'
+        }
+    }
+
+    flavorDimensions "env"
+    productFlavors {
+        sit {
+            dimension "env"
+        }
+        pro {
+            dimension "env"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'webank-KYC-demo-proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'webank-KYC-demo-proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //0. appcompat-v7
+    implementation 'com.android.support:appcompat-v7:26.0.2'
+    //1. 云刷脸SDK
+    implementation(name: 'WbCloudFaceLiveSdk-v3.1.7-677a4796', ext: 'aar')
+    //2. 云common SDK
+    implementation(name: 'WbCloudNormal-v4.0.10-1e5e27e', ext: 'aar')
+}
