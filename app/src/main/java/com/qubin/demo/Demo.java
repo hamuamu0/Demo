@@ -216,6 +216,12 @@ public class Demo {
         return head;
     }
 
+    /**
+     * 两个数之和
+     * @param arr
+     * @param target
+     * @return
+     */
     public int [] twoSum(int [] arr,int target){
         if (arr.length == 0){
             return null;
@@ -237,6 +243,11 @@ public class Demo {
         return a;
     }
 
+    /**
+     *
+     * @param s
+     * @return
+     */
     public int firstUniqChar(String s){
         if (s.length() == 0){
             return -1;
