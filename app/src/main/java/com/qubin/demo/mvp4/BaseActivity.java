@@ -1,11 +1,16 @@
 package com.qubin.demo.mvp4;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.qubin.demo.UserBean;
 
 /**
  * author：created by qub
@@ -23,6 +28,12 @@ public abstract class BaseActivity extends AppCompatActivity implements Mvp4IVie
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("正在加载...");
         initData();
+        Intent intent = new Intent(this, Activity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
+        Intent intent1 = getIntent();
+        UserBean userBean = intent1.getParcelableExtra("key");
 
     }
 

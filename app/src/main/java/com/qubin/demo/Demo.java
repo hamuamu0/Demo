@@ -267,6 +267,30 @@ public class Demo {
 
     }
 
+    private boolean isIsomorphic(String s,String t){
+        char [] c1 = s.toCharArray();
+        char [] c2 = t.toCharArray();
+
+
+        Map<Character,Integer> map1 = new HashMap<>();
+        Map<Character,Integer> map2 = new HashMap<>();
+
+        for (int i = 0; i < c1.length; i++) {
+            if (!map1.containsKey(c1[i])){
+                map1.put(c1[i],i);
+            }
+
+            if (!map2.containsKey(c2[i])){
+                map2.put(c2[i],i);
+            }
+
+            if (map1.get(i) != map2.get(i)){
+                return false;
+            }
+
+        }
+        return true;
+    }
 
 
 }
